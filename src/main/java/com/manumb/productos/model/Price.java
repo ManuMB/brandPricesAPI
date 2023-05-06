@@ -1,6 +1,7 @@
 package com.manumb.productos.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.manumb.productos.service.impl.BrandService;
 import jakarta.persistence.*;
 import lombok.*;
 import java.sql.Timestamp;
@@ -21,17 +22,17 @@ public class Price {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "price_sequence")
     private Long id;
 
-    private Long brand_id;
-    private Timestamp start_date;
-    private Timestamp end_date;
-    private Long price_list;
-    private Long product_id;
-    private boolean priority;
-    private Double price;
-    private Currency curr;
-
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE) //Revisar el funcionamiento del cascadeType.Merge
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @JoinColumn(name = "product_id")
     private Product product;
+
+    private Timestamp start_date;
+    private Timestamp end_date;
+    private Long price_list;
+    private boolean priority;
+    private Double price;
+    private Currency curr;
+
+
 }

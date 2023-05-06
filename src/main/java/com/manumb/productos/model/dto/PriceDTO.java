@@ -1,6 +1,7 @@
 package com.manumb.productos.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.manumb.productos.model.Product;
 import lombok.*;
 import java.sql.Timestamp;
 import java.util.Currency;
@@ -14,7 +15,7 @@ import java.util.Currency;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PriceDTO {
 
-    private Long brand_id;
+    private Product product;
     private Timestamp start_date;
     private Timestamp end_date;
     private Long price_list;
