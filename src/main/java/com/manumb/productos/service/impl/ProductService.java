@@ -6,12 +6,14 @@ import com.manumb.productos.model.dto.ProductDTO;
 import com.manumb.productos.repository.IProductRepository;
 import com.manumb.productos.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class ProductService implements IProductService {
 
     @Autowired
@@ -53,7 +55,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public Set<ProductDTO> listProduct() {
+    public Set<ProductDTO> listAllProducts() {
         List<Product> listProduct = iProductRepository.findAll();
         Set<ProductDTO> setProductDTO = new HashSet<>();
 

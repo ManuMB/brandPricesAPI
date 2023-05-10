@@ -10,5 +10,5 @@ public interface IProductService {
     void deleteProduct(Long id);
     ProductDTO searchProduct(Long id);
     void updateProduct(ProductDTO productDTO);
-    Set<ProductDTO> listProduct();
+    Set<ProductDTO> listAllProducts();
 }

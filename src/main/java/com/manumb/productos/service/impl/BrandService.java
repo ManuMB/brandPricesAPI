@@ -55,7 +55,7 @@ public class BrandService implements IBrandService {
     }
 
     @Override
-    public Set<BrandDTO> searchBrand() {
+    public Set<BrandDTO> listAllBrands() {
         List<Brand> listBrand = iBrandRepository.findAll();
         Set<BrandDTO> setBrandDTO = new HashSet<>();
 

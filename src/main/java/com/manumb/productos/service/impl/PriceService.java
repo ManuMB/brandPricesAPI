@@ -6,12 +6,14 @@ import com.manumb.productos.model.dto.PriceDTO;
 import com.manumb.productos.repository.IPriceRepository;
 import com.manumb.productos.service.IPriceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class PriceService implements IPriceService {
 
     @Autowired
@@ -53,7 +55,7 @@ public class PriceService implements IPriceService {
     }
 
     @Override
-    public Set<PriceDTO> updatePrice() {
+    public Set<PriceDTO> listAllPrices() {
         List<Price> listPrice = iPriceRepository.findAll();
         Set<PriceDTO> setPriceDTO = new HashSet<>();
 

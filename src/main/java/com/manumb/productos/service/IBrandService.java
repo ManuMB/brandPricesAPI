@@ -9,5 +9,5 @@ public interface IBrandService {
     void deleteBrand(Long id);
     BrandDTO searchBrand(Long id);
     void updateBrand(BrandDTO brandDTO);
-    Set<BrandDTO> searchBrand();
+    Set<BrandDTO> listAllBrands();
 }

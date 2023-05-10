@@ -9,5 +9,5 @@ public interface IPriceService {
     void deletePrice(Long id);
     PriceDTO searchPrice(Long id);
     void updatePrice(PriceDTO priceDTO);
-    Set<PriceDTO> updatePrice();
+    Set<PriceDTO> listAllPrices();
 }

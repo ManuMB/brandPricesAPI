@@ -18,7 +18,6 @@ public class PriceDTO {
     private Product product;
     private Timestamp start_date;
     private Timestamp end_date;
-    private Long price_list;
     private Long product_id;
     private boolean priority;
     private Double price;
